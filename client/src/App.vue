@@ -1,17 +1,26 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Launches />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios';
 
+import Launches from './components/Launches.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Launches
+  },
+    methods: {
+    getLaunches: function () {
+      axios.get("http://localhost:3000/launches")
+      .then((response)  =>  {
+        this.info = response;
+      });
+    }
   }
 }
 </script>
