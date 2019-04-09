@@ -1,4 +1,6 @@
-const API_ENDPOINT = "https://launchlibrary.net/1.4/launch";
+"use strict";
+
+const { API_ENDPOINT } = require("../config");
 const fetch = require("node-fetch");
 
 module.exports = async (req, res) => {
@@ -11,7 +13,7 @@ module.exports = async (req, res) => {
         return {
             id: launch.id,
             name: launch.name,
-            net: launch.net
+            time: launch.net
         }
     });
 
