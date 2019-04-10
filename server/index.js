@@ -1,12 +1,18 @@
 "use strict";
 
 const express = require("express");
+const cors = require('cors');
 const app = express();
 
 // Initialize startup variables
-const [, , PORT] = process.argv;
+const [, , PORT, ENV] = process.argv;
 
 const port = PORT || 3000;
+
+// Do not allow global cross-origin in production
+if (ENV !== "production") {
+    app.use(cors());
+}
 
 // Initialize routes
 require("./routes")(app);

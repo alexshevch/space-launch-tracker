@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/shevaroller/space-launch-tracker#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "node-fetch": "^2.3.0"
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "node-fetch": "2.3.0"
   }
 }
