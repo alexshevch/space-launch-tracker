@@ -3,7 +3,9 @@ App that lets users view upcoming space launch missions around the world
 
 ## Server
 
-Run: `node server/index.js <PORT>`, `PORT` defaults to 3000
+Run server with `node server/index.js <PORT> <ENV>` command, where
+ - `PORT` is a numeric value that defaults to 3000
+ - `ENV` is an environment name, which disallows CORS if set to `production`
 
 ### Endpoints
 
