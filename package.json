@@ -1,6 +1,6 @@
 {
   "name": "space-launch-tracker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "App that lets users view upcoming space launch missions around the world",
   "main": "server/index.js",
   "scripts": {
