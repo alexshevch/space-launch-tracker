@@ -44,6 +44,10 @@ export default {
         color: #2c3e50;
         margin-top: 60px;
     }
+    a {
+        color: #2c3e50;
+        text-decoration: none;
+    }
     .logo {
         width: 192px;
     }

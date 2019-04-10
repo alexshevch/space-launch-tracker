@@ -49,10 +49,6 @@
         display: inline-block;
         margin: 0 10px;
     }
-    a {
-        color: #2c3e50;
-        text-decoration: none;
-    }
     span.name {
         font-size: 18px;
         font-weight: bold;

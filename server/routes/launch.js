@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
         id: launch.id,
         name: launch.name,
         time: launch.net,
+        agency: launch.rocket.agencies[0].name,
         location: launch.location.name,
         wikis: {
             location: launch.location.wikiURL,
