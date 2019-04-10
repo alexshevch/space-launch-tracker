@@ -6,21 +6,11 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 import Launches from './components/Launches.vue'
 export default {
   name: 'app',
   components: {
     Launches
-  },
-    methods: {
-    getLaunches: function () {
-      axios.get("http://localhost:3000/launches")
-      .then((response)  =>  {
-        this.info = response;
-      });
-    }
   }
 }
 </script>

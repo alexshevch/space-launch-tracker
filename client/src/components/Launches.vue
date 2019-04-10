@@ -1,19 +1,29 @@
 <template>
-  <div class="launches">
-    <h1>{{ info }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <button id="btn" class="get-launches" v-on:click="getLaunches">Get Launches</button>
-    </p>
+  <div class="launches" v-if="isLoaded">
+    <h1>Launches</h1>
+      <div class="launch" v-for="launch in launches" :key="launch.id">
+          {{ launch.name }} {{ launch.time }}
+      </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'Launches',
-  props: {
-    info: String
+  data () {
+  return {
+    isLoaded: false
+  }
+},
+  methods: {
+  },
+  mounted() {
+      axios.get("http://localhost:3000/launches").then(res => {
+          this.launches = res.data;
+          this.isLoaded = true;
+      });
   }
 }
 </script>
