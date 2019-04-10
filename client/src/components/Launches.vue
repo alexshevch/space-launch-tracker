@@ -3,9 +3,11 @@
     <h1>/ Upcoming Launches \</h1>
     <ul class="launch" v-for="launch in launches" :key="launch.id">
       <li>
-        <span class="name">{{ launch.name.split("|")[0] }}</span>
-        <br>
-        <span class="time">{{ moment(launch.time).format('LL') }}</span>
+          <router-link :to="`/launch/${launch.id}`">
+            <span class="name">{{ launch.name.split("|")[0] }}</span>
+            <br>
+            <span class="time">{{ moment(launch.time).format('LL') }}</span>
+          </router-link>
       </li>
     </ul>
   </div>
@@ -48,7 +50,8 @@
         margin: 0 10px;
     }
     a {
-        color: #42b983;
+        color: #2c3e50;
+        text-decoration: none;
     }
     span.name {
         font-size: 18px;
