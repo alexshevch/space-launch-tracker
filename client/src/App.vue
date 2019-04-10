@@ -20,17 +20,17 @@
     <p class="rocket-top">/_________________________\</p>
     <p class="rocket-top">/___________________________\</p>
     <p class="rocket-top">/_____________________________\</p>
-    <Launches />
-  </div>
+    <!-- component matched by the route will render here -->
+    <router-view></router-view>  </div>
 </template>
 
 <script>
-import Launches from './components/Launches.vue';
 
 export default {
   name: 'app',
   components: {
-    Launches
+    // Launches,
+    // Launch
   }
 }
 </script>
